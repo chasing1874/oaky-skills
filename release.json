@@ -1,0 +1,42 @@
+{
+  "version": "0.2.1",
+  "repository": "chasing1874/oaky-skills",
+  "cliPackage": "@oaky-ai/cli",
+  "cliVersion": "0.2.0",
+  "fileHashes": {
+    "skills/oaky/SKILL.md": "53ef7430792c698325a385e8664cf855280c059d57a71bf0f44fc7ce73123817",
+    "skills/oaky/references/content-creation-kits/references/document-workflow.md": "c43245b33afd22c4535548f0bcfac13e9cd89f602210aeb419a745b18e953b4a",
+    "skills/oaky/references/content-creation-kits/references/generic-image-post-v1.md": "b52f94d5c965ce3c0b7ce1d90151e4764a7dcdec0234437c7aa9e6d1707d8a27",
+    "skills/oaky/references/content-creation-kits/references/generic-script-v1.md": "4e2cd2143a7567a9a94a60c24863d136bccf61d9ed00e6843f634b3466628f05",
+    "skills/oaky/references/content-creation-kits/references/jike-image-post-v1.md": "5859551a15bc8bdd9eca9670ba0ef69466ae2dbaf517b5616822daf2a0f08789",
+    "skills/oaky/references/content-creation-kits/references/visual-production.md": "27fc129cfba2045980ad681e9e8403946d4efb9ec9f66fd71120866df7c13c27",
+    "skills/oaky/references/content-creation-kits/references/wechat-moments-post-v1.md": "4ac72034063971d4a8557da74ccca3bb1477da029e1780875d9a4af832b79a94",
+    "skills/oaky/references/content-creation-kits/references/wechat-official-article-v1.md": "11715fa99a159c5002074578514446b8506d8500ab633e1996f5d4371a4122ab",
+    "skills/oaky/references/content-creation-kits/references/x-image-post-v1.md": "77f840ba9ca24b5e6623874cc837c28b2cd198af2a5ea0c8a5621aad03995fe5",
+    "skills/oaky/references/content-creation-kits/references/xiaohongshu-image-post-v1.md": "9d73243a10ce72a8f4e047407b2e6f8c491aa208113ea9185ae943c6635c98c0",
+    "skills/oaky/references/content-creation-kits/references/xiaohongshu-long-note-v1.md": "49af3eb3aac1658ccbbd741a208814a4c4e71f386e8f7ed69129c2c54767fc8e",
+    "skills/oaky/references/content-creation-kits/workflow.md": "7aa1a634a99400e8a104e52894c4110afc231d71062a66d170f61a52fcfd44da",
+    "skills/oaky/references/creative-practice-learning/references/learning-protocol.md": "17ec0cc7f6b95bd2848f193d7ae5bd78f4f0a52f56f155a46e76ed90c2239f92",
+    "skills/oaky/references/creative-practice-learning/workflow.md": "40741502a71b2fa0e5bc6a3a521fd38660bbdb1957d490668551b9c850b465e8",
+    "skills/oaky/references/library.md": "6898313c1eeb9569c9f7295befe0fcedb75969182dda352d7a79e9139d533a30",
+    "skills/oaky/references/setup.md": "66988d2f934262e5f65d1d7af5105c6b55279b93a47a0e1c750513ae82b46b69",
+    "skills/oaky/references/social-data-research/references/bilibili-v1.md": "eea6df38ae2631b01833aa086da4cca6a5a29b1c50ee83fe924b97ab5b2ef7cd",
+    "skills/oaky/references/social-data-research/references/douyin-v1.md": "b46bfbbd5f3e3f43088d2b3010d85b9230b110dd4f2e16300d5e5440d989ad37",
+    "skills/oaky/references/social-data-research/references/evidence-and-stopping.md": "10779c590884129cfc74e2c3d5f235529bf169baf233258192e0083118013770",
+    "skills/oaky/references/social-data-research/references/jike-v1.md": "0afc21a5b7d7c7c950f8e821ebe802bf1685b4172f06dc2100e340dfb623f5a6",
+    "skills/oaky/references/social-data-research/references/research-workflow.md": "8ce9c25dde4c8a157b5e73e60c43918267e83b7d2cf51718322863530f47d802",
+    "skills/oaky/references/social-data-research/references/wechat-channels-v1.md": "9f898185617d1b5d3b7332f3de4cc81e36d51fb6de3da9d74aa91dbbbe6555d5",
+    "skills/oaky/references/social-data-research/references/wechat-mp-v1.md": "4bb4d88ad9915885b997b6851a57dcf0a5bea7c1cbd46411da0fe2c82a1d47c5",
+    "skills/oaky/references/social-data-research/references/weibo-v1.md": "98ec9419774c2441d5e7f81ebabc9d96db8e1d61289a3efaec4f0db44fdcc11e",
+    "skills/oaky/references/social-data-research/references/x-v1.md": "cd47f6dd45f0c39bc39d462c09e9998b132b3708fc25c423adbffd92e11c67a0",
+    "skills/oaky/references/social-data-research/references/xiaohongshu-v1.md": "c5e1810eb6b3f3356c72c62b9ba9002a87c66f45a53b481fbae2be211d12123e",
+    "skills/oaky/references/social-data-research/references/youtube-v1.md": "73b40aadf3dbb7f0562977d4b12843e1350566c0771d7d2d25d05569170bac84",
+    "skills/oaky/references/social-data-research/references/zhihu-v1.md": "62cd33486adb51357fb0b1d88de2e60268e7c0561c37e2264aebd3e045c199c5",
+    "skills/oaky/references/social-data-research/workflow.md": "a0d5bea128c4b83243409761d429373ee400dc7f069378a11c218c2f94e6de73",
+    "skills/oaky/references/tasks-and-apps.md": "1bc9223a1c907ff89e332d0322dc9d93d25acae62de3898c11ec326b2b164ea3"
+  },
+  "zip": {
+    "name": "oaky-skill-0.2.1.zip",
+    "sha256": "81bba4ef448e4d3b10a1603b880c78604606c802fbb9f17831ae745591d08f94"
+  }
+}
