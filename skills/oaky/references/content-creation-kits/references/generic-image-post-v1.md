@@ -1,6 +1,6 @@
 # `generic.image_post@1`
 
-Use for one reusable image-and-text post whose copy and ordered image set can be handed off to more than one compatible platform. The first supported publication targets are Xiaohongshu and WeChat Moments. Keep an explicitly platform-only draft in its platform-specific Format.
+Use for one reusable image-and-text post whose copy and ordered image set can be handed off to more than one compatible platform. The compatible publication targets are whatever `list_publication_targets` returns for this Format, for example Douyin, Xiaohongshu, and WeChat Moments. Keep an explicitly platform-only draft in its platform-specific Format.
 
 ## Data
 
@@ -19,9 +19,9 @@ Use for one reusable image-and-text post whose copy and ordered image set can be
 
 ## Publication targets
 
-- Compatible targets: `xiaohongshu.image_post` and `wechat_moments.post`.
+- Compatible targets: query `list_publication_targets` with `formatId: "generic.image_post"`; current examples include `douyin.image_post`, `xiaohongshu.image_post`, and `wechat_moments.post`. Do not assume the list is fixed.
 - When `xiaohongshu.image_post` is selected, `body` must be at most 1,000 characters. Draft with margin; if the Registry returns `publication_target_body_too_long` at `data.body`, shorten it and retry `manageCreationItem` in the same task.
-- Use only destinations the user explicitly requested. Both may be selected for the same document.
+- Use only destinations the user explicitly requested. Several compatible targets may be selected for the same document.
 - Omission or `[]` keeps the document neutral; it does not guess a platform.
 - Platform handoff may apply target-specific copying or launch behavior, while the stored content remains one generic document.
 

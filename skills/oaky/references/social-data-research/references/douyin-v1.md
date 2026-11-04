@@ -1,11 +1,11 @@
 # 抖音能力 v1
 
-当前 active 能力：
+已注册的能力（当前是否可用和报价以 `describe_capability` 返回为准）：
 
 - `douyin.content.search`：关键词搜索公开视频、图文或文章。
 - `douyin.creator.profile`：用 `sec_user_id` 读取公开创作者资料。
 - `douyin.creator.posts`：用 `sec_user_id` 分页读取公开作品。
-- `douyin.content.detail`：用 `aweme_id` 读取单篇详情；先尝试免费公开页，失败时才回退 TikHub。
+- `douyin.content.detail`：用 `aweme_id` 读取单篇详情。
 - `douyin.content.comments`：用 `aweme_id` 分页读取一级评论。
 
 `creatorId` 只能使用创作者主页/标准输出中的 `sec_user_id`。抖音分享链接 query string 里的 `did`、`iid`、

@@ -1,11 +1,11 @@
 ---
 name: oaky
-description: 使用橡果 Oaky 中的收藏、灵感和作品完成检索、整理与创作，管理橡果待办和定时任务，或读取已授权的应用数据。用户提到橡果、Oaky，或明确要使用橡果中的内容时使用。
+description: 把橡果 Oaky 当作个人知识库：收藏与记录、整理标签、回顾关联、基于自己的资料问答和写成稿件；也用于公开资料/社媒研究、沉淀我的方法、管理橡果待办与定时任务、读取已授权应用。用户提到橡果、Oaky 或要用其中内容时使用。
 ---
 
 # 橡果 Oaky
 
-让用户在当前 AI 工具中使用橡果里的内容。只操作用户请求涉及的对象；橡果数据与外部宿主的本地文件、记忆、浏览器和任务是不同资源。
+橡果是用户的个人知识库：用户在这里收藏和记录，整理、回顾并关联这些内容，再基于自己的资料回答问题或写成稿件。本 Skill 让用户在当前 AI 工具中使用这些内容。只操作用户请求涉及的对象；橡果数据与外部宿主的本地文件、记忆、浏览器和任务是不同资源。
 
 ## 连接与发现
 
@@ -19,10 +19,10 @@ description: 使用橡果 Oaky 中的收藏、灵感和作品完成检索、整�
 
 ## 按任务读取
 
-- 收藏、正文、标签、保存链接和解析状态：[收藏与整理](references/library.md)。
-- 完整稿件、平台图文、修改已存作品：[创作工作流](references/content-creation-kits/workflow.md)。只读取所需 Format 引用；不要把探索性的短回答自动存成作品。
-- 用户明确要沉淀或修改自己的创作方法：[创作方法](references/creative-practice-learning/workflow.md)。
-- 公开平台内容、创作者或评论调研：[社交数据调研](references/social-data-research/workflow.md)。
+- 记一条文字/链接/图片/语音、查找和读取收藏、标签、回收站、基于自己资料的回顾与问答：[收藏、记录与整理](references/library.md)。
+- 把资料和想法写成完整稿件、平台图文，或修改已存稿件：[创作工作流](references/content-creation-kits/workflow.md)。只读取所需 Format 引用；不要把探索性的短回答自动存成作品。
+- 用户明确要沉淀或修改自己长期的方法与偏好（写作、学习、工作）：[我的方法与偏好](references/creative-practice-learning/workflow.md)。
+- 研究公开网页、平台内容、创作者或评论：[公开资料研究](references/social-data-research/workflow.md)。
 - 橡果待办、定时任务、已授权应用：[待办、任务与应用](references/tasks-and-apps.md)。
 
 ## 执行与恢复

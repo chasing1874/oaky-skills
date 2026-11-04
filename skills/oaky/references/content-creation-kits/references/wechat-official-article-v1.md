@@ -47,7 +47,7 @@ preview another theme unless the user explicitly wants multiple independent vers
 
 ## Images
 
-Use a stable Clipbase image in Markdown as:
+Use a stable Oaky image asset in Markdown as:
 
 ```markdown
 ![图片说明](clipbase-asset://550e8400-e29b-41d4-a716-446655440000)
@@ -62,7 +62,7 @@ List the same asset in `images`:
 ```
 
 Never invent an `assetId`; obtain it from image generation or the target file query adapter. Put each referenced
-Clipbase asset in `images` once, ordered by its first appearance in `body`.
+Oaky asset in `images` once, ordered by its first appearance in `body`.
 Set `coverImage` explicitly. It may reference the same asset as a body image, but it is not inferred from `images[0]`.
 
 ## Write
@@ -87,5 +87,7 @@ Set `coverImage` explicitly. It may reference the same asset as a body image, bu
   }
 }
 ```
+
+The example omits `coverImage` only because no real asset exists yet. Once image generation or the file query adapter returns a real asset id, add `"coverImage": { "assetId": "<real asset id>" }` to `data`; a document without it stays previewable but cannot be synced to WeChat drafts.
 
 Submit the complete `data` object directly. On replace, also send `itemId` and `expectedRevision`. Creating or replacing the document only creates a previewable article; do not claim it was saved to a WeChat draft unless the separate authenticated draft-sync action succeeds.
