@@ -9,11 +9,11 @@ description: 把橡果 Oaky 当作个人知识库：收藏与记录、整理标�
 
 ## 连接与发现
 
-首次使用或认证失败时读取 [安装与授权](references/setup.md)。已连接时不要重复安装或创建令牌。
+首次使用或认证失败时读取 [安装与授权](references/setup.md)。已连接时不要重复安装或重新登录。
 
 1. 使用 `oaky agent capabilities` 确定能力由 `oaky_cli` 还是 `host_native` 承担。
-2. 使用 `oaky agent tools` 获取当前业务目录，仅对任务需要的工具运行 `oaky agent tool describe --name <tool>`。
-3. 按返回的 inputSchema 构造对象，经 stdin 或请求文件调用 `oaky agent tool invoke --name <tool> --input -`。复杂领域再按需发现单个 Format / operation，不一次加载全部合同。
+2. 运行一次 `oaky agent tools` 获取当前业务目录。工具列出 `actions` 签名（如 `get(clipId, sectionId?)`，必填在前、可选带 `?`）且所需参数从签名已经明确时，直接经 stdin 或请求文件调用 `oaky agent tool invoke --name <tool> --input -`。
+3. 拿不准某个 action 的字段时只读那一个：`oaky agent tool describe --name <tool> --action <action>`（多个用逗号分隔）。目录里没有 `actions` 的工具，或需要工具级概览时，用 `oaky agent tool describe --name <tool>`。复杂领域再按需发现单个 Format / operation，不一次加载全部合同。
 
 目录与服务端执行结果优先于本文。工具消失、操作不可用或 schema 变化时刷新相关描述，修正实际请求；不猜旧别名，不尝试内部接口绕过限制。
 
@@ -28,8 +28,8 @@ description: 把橡果 Oaky 当作个人知识库：收藏与记录、整理标�
 ## 执行与恢复
 
 - 身份由本机 Oaky 授权配置提供。不要把 token 放进 Skill、请求 JSON、命令参数或输出；不要替用户申请管理员权限。
-- describe 中的 `idempotency` 决定是否传 `--idempotency-key`。同一逻辑写入因网络中断重试时复用同一个非秘密 key；请求内容或目标变化时换 key。CLI 不会替调用者自动重试写入。
-- HTTP/退出码错误和 JSON 中的 `ok:false` 都是失败。先看错误的 `code/path/recovery`，修正后再调用；不能把“请求已提交”当作“任务已完成”。
+- 工具目录和 describe 里的 `idempotency` 都说明该工具是否需要 `--idempotency-key`；直接调用时看目录即可。同一逻辑写入因网络中断重试时复用同一个非秘密 key；请求内容或目标变化时换 key。CLI 不会替调用者自动重试写入。
+- HTTP/退出码错误和 JSON 中的 `ok:false` 都是失败。先看错误的 `code/path/recovery`，修正后再调用；参数无效时失败回执的 `error.help` 已带该 action 的签名、参数 schema 和示例，据此修正后重试，不必先重新 describe；不能把“请求已提交”当作“任务已完成”。
 - 使用返回的真实 ID、revision、Resource Ref 和 opaque continuation。引用图片不会自动把图片送给当前模型；需要检查时使用服务支持的读取/下载路径，再交给宿主自己的图片能力。
 - 读取操作不隐式创建创作空间；遇到 `project_required` 时让用户选择/建立空间，不猜 ID。修改作品保留未修改内容与资产引用，并按当前 revision 执行。
 - 外部宿主不继承橡果内部会话、附件或云电脑。遇到 `operation_unavailable_for_channel` 时说明可用替代路径；不要伪造内部会话。

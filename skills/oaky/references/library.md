@@ -1,6 +1,6 @@
 # 收藏、记录与整理
 
-橡果的灵感库是用户的个人知识库。先用 `queryClips` 的当前 describe 选择 recent/search/get/inspect_link 等动作。列表和搜索先定位对象，再读需要的正文；不批量下载全部收藏。
+橡果的灵感库是用户的个人知识库。按 `oaky agent tools` 目录中 `queryClips` 的 actions 签名选择 recent/search/get/inspect_link 等动作。列表和搜索先定位对象，再读需要的正文；不批量下载全部收藏。
 
 ## 查找与读取
 
@@ -47,7 +47,7 @@ oaky trash restore --id <clipId>
 oaky trash purge --id <clipId> --dry-run
 ```
 
-标签也可通过 `queryTags` / `manageTags` 查询和修改。具体参数先用 `oaky --help` 核对。删除、清空回收站或批量修改先用命令的 `--dry-run` 预览，核对目标后按用户已授权范围加 `--yes` 执行；彻底删除不可恢复，不要在用户只说「删掉」时顺手清空回收站。通用 `agent tool invoke` 没有统一 dry-run，不要给其 payload 猜造该字段。
+标签也可通过 `queryTags` / `manageTags` 查询和修改，参数见目录中的 actions 签名。便捷命令的具体参数先用 `oaky --help` 核对。删除、清空回收站或批量修改先用命令的 `--dry-run` 预览，核对目标后按用户已授权范围加 `--yes` 执行；彻底删除不可恢复，不要在用户只说「删掉」时顺手清空回收站。通用 `agent tool invoke` 没有统一 dry-run，不要给其 payload 猜造该字段。
 
 ## 分析视频收藏的画面
 

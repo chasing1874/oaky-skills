@@ -1,10 +1,10 @@
 {
-  "version": "0.2.2",
+  "version": "0.2.3",
   "repository": "chasing1874/oaky-skills",
   "cliPackage": "@oaky-ai/cli",
-  "cliVersion": "0.2.1",
+  "cliVersion": "0.2.2",
   "fileHashes": {
-    "skills/oaky/SKILL.md": "1b3037bff36ba7b9ca612bfda341da9316b3de57766d28ab02073fc04c04d331",
+    "skills/oaky/SKILL.md": "d453dda6a1c632abfa94d6a5960bdbd8ecbaa199435d786fff50f7435a0d9bb7",
     "skills/oaky/references/content-creation-kits/references/document-workflow.md": "bce614c22698a1ed71f3767f27de667cff1ca86b4999e3eb8f5edc3be96213e3",
     "skills/oaky/references/content-creation-kits/references/generic-image-post-v1.md": "9f583ec394812bd92791d4c9ea17ea234829fad241a6d60135918d498b482bbe",
     "skills/oaky/references/content-creation-kits/references/generic-script-v1.md": "4e2cd2143a7567a9a94a60c24863d136bccf61d9ed00e6843f634b3466628f05",
@@ -17,9 +17,9 @@
     "skills/oaky/references/content-creation-kits/references/xiaohongshu-long-note-v1.md": "49af3eb3aac1658ccbbd741a208814a4c4e71f386e8f7ed69129c2c54767fc8e",
     "skills/oaky/references/content-creation-kits/workflow.md": "50dac1c60c8ecaaaf32374f03ee97f488940d45f9d161803b2a8f459d88a7185",
     "skills/oaky/references/creative-practice-learning/references/learning-protocol.md": "cf0e868e174fd73d2b8db50b96590242f4de7282a5eb0e9326d7623dacacd0e3",
-    "skills/oaky/references/creative-practice-learning/workflow.md": "551ebcdd2aed242e653166f8e3b90f8cff82f670f69133003ce49664d9b5bed1",
-    "skills/oaky/references/library.md": "79343baaa4a2baf66c4e94b08de7a3b90fcd119bc320d96ef40ec019d5c01b7c",
-    "skills/oaky/references/setup.md": "2816642f41e80d93ab053fa1919d9b36ae0f2d209500da5b736a353c7fc188c5",
+    "skills/oaky/references/creative-practice-learning/workflow.md": "874ceda4fb3144feb2351094bd6b6398c7131064645eb4b93ce24874bd9a1424",
+    "skills/oaky/references/library.md": "6e3f81c4b70012f781469dd328437df5cbe1cc1e673ee1bfea12173d113e330a",
+    "skills/oaky/references/setup.md": "0f05b3a54fc5175980741b5583dc14cb32ae51c1146235e4eaf0e7309c9177b1",
     "skills/oaky/references/social-data-research/references/bilibili-v1.md": "78204c34c1c873734b405c7623d0c3faa72dc2a7685593860573fffc24e3583f",
     "skills/oaky/references/social-data-research/references/douyin-v1.md": "f154f31c71a8e8715eca61adc9b93da205a4cac8cdd908465c2495210209f001",
     "skills/oaky/references/social-data-research/references/evidence-and-stopping.md": "10779c590884129cfc74e2c3d5f235529bf169baf233258192e0083118013770",
@@ -32,11 +32,11 @@
     "skills/oaky/references/social-data-research/references/xiaohongshu-v1.md": "ec17c9a9b164c60410ce6283ef4c56d915b4521c681861f1dbea1865cd2e1a91",
     "skills/oaky/references/social-data-research/references/youtube-v1.md": "4b5a250395fc4eb79388579c4b49f07f8fdbe7fcfd6bc3a119cb3933c847f705",
     "skills/oaky/references/social-data-research/references/zhihu-v1.md": "c8817998143de9ccc210eb43281318868743742e85ee161d131f578620f838e8",
-    "skills/oaky/references/social-data-research/workflow.md": "b781e5320420c63ffa1e151c05b8870630e8f05e87fda353c9ffc132a7ffa77f",
-    "skills/oaky/references/tasks-and-apps.md": "1bc9223a1c907ff89e332d0322dc9d93d25acae62de3898c11ec326b2b164ea3"
+    "skills/oaky/references/social-data-research/workflow.md": "c5c874fcfd06ff12b278b49fe650686219b9f89784c816dabe4ee846a8a42bf8",
+    "skills/oaky/references/tasks-and-apps.md": "14da04370f857b173b4c81603fe46be9e5f24f3098feba5e4f10f8ee54e1a66d"
   },
   "zip": {
-    "name": "oaky-skill-0.2.2.zip",
-    "sha256": "10e76384659e0cf2273a006e33a50a678fb70dff59e4fa2ff5267e2ee89e3fa0"
+    "name": "oaky-skill-0.2.3.zip",
+    "sha256": "2911e695be4a2ef427b472539ece4ff3722a5d5518f4746cad7fb6188c895da0"
   }
 }

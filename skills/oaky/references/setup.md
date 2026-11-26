@@ -1,10 +1,10 @@
 # 安装与授权
 
-Oaky Skill 是标准 Agent Skills 目录，通过公开仓库 `https://github.com/chasing1874/oaky-skills` 或该仓库 Release 的 ZIP 分发。Skill 本身不需要 npm；它使用的执行依赖是 `@oaky-ai/cli`（最低版本 0.2.1），命令为 `oaky`，需要 Node.js 22 或以上及网络访问。
+Oaky Skill 是标准 Agent Skills 目录，通过公开仓库 `https://github.com/chasing1874/oaky-skills` 或该仓库 Release 的 ZIP 分发。Skill 本身不需要 npm；它使用的执行依赖是 `@oaky-ai/cli`（最低版本 0.2.2），命令为 `oaky`，需要 Node.js 22 或以上及网络访问。
 
 ## 已安装 Skill 后的连接
 
-正在读取这份已安装的 Skill 时，不要再次运行 Skill 安装器。先运行 `oaky version`；缺少执行依赖时安装 `npm install -g @oaky-ai/cli@0.2.1`，版本低于 0.2.1 时更新依赖。不要把 npm 包安装成功当成宿主已经发现 Skill。
+正在读取这份已安装的 Skill 时，不要再次运行 Skill 安装器。先运行 `oaky version`；缺少执行依赖时安装 `npm install -g @oaky-ai/cli@0.2.2`，版本低于 0.2.2 时更新依赖。npm 提示找不到这个版本时（新版尚未同步到 npm 或镜像），改用本 Skill 发布页附带的同版本安装包：`npm install -g https://github.com/chasing1874/oaky-skills/releases/download/v0.2.3/oaky-ai-cli-0.2.2.tgz`。不要把 npm 包安装成功当成宿主已经发现 Skill。
 
 ## Skill 安装与维护
 
@@ -16,10 +16,18 @@ Codex 的用户级目录是 `~/.agents/skills/oaky`，Claude Code 是 `~/.claude
 
 ## 授权
 
-授权来自橡果设置 → 橡果 Skill。用户提供访问令牌后，通过 stdin 交给 `oaky auth login --token-stdin`，配置保存在 `~/.config/oaky/config.json`，权限为 0600。不要在 shell 参数里写 token，不写入仓库或 Skill 文件。自动化环境也支持 `OAKY_API_TOKEN`；`OAKY_API_URL` 只用于用户明确指定的非默认服务。不要读取或改写无关凭证。
+默认用网页登录，不需要用户提供访问令牌，令牌也不会出现在对话里：
+
+1. 运行 `oaky auth login --no-wait --client-name "<应用名称>"`，得到 `verificationUrl` 和 `userCode`。应用名称用用户安装说明里给出的那个，没有给时用当前宿主的名称（例如 Claude Code）。用户的安装说明里给了服务地址时，加上 `--api-url <服务地址>`。
+2. 把链接和校验码原样告诉用户，请用户在浏览器里打开链接、登录橡果，核对校验码一致后选择「允许」。用户可以在任意设备上打开，链接 10 分钟内有效。
+3. 运行 `oaky auth login --resume` 等待确认；用户确认后命令结束，授权保存在 `~/.config/oaky/config.json`，权限为 0600。命令被宿主的时间限制中断时再运行一次即可；链接过期或被拒绝时回到第 1 步。
+
+用户自己在终端里操作时可以直接运行 `oaky auth login`，它会打印链接和校验码并一直等到确认。`oaky auth login` 提示需要 `--token-stdin` 说明执行依赖版本过旧，先升级再登录。
+
+网页登录走不通时（例如用户在网页上无法登录同一个账号）改用访问令牌：令牌在橡果「设置 → 连接 AI → 访问令牌」里生成，用户提供后通过 stdin 交给 `oaky auth login --token-stdin`。不要在 shell 参数里写 token，不写入仓库或 Skill 文件。自动化环境也支持 `OAKY_API_TOKEN`；`OAKY_API_URL` 只用于用户明确指定的非默认服务。不要读取或改写无关凭证。
 
 运行 `oaky auth status` 确认账号，再运行 `oaky agent capabilities`。认证失败时说明令牌可能失效或账号不匹配，更新授权后重试，不循环提交业务写入。
 
-卸载 Skill 不撤销账号授权。`oaky auth logout` 清除本地授权；要撤销远端访问，在 App 中删除对应令牌。移除执行依赖可用 `npm uninstall -g @oaky-ai/cli`。
+卸载 Skill 不撤销账号授权。`oaky auth logout` 清除本地授权；要撤销远端访问，在橡果「设置 → 连接 AI」中断开或删除对应令牌。移除执行依赖可用 `npm uninstall -g @oaky-ai/cli`。
 
 旧命名测试版不自动迁移：重新安装 Oaky 并重新授权，确认可用后自行清理旧安装。不要默默读取旧账号配置。
