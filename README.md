@@ -2,13 +2,13 @@
 
 在 Codex、Claude Code 中把橡果当作你的个人知识库：收藏与记录、整理、回顾关联、基于自己的资料问答并写成稿件，也能做公开资料研究、管理待办和定时任务。
 
-这是标准 [Agent Skills](https://agentskills.io/specification) 目录，不是 npm 包。`skills/oaky/SKILL.md` 是入口，`references/` 提供按需加载的工作流。版本：**0.2.3**。
+这是标准 [Agent Skills](https://agentskills.io/specification) 目录，不是 npm 包。`skills/oaky/SKILL.md` 是入口，`references/` 提供按需加载的工作流。版本：**0.2.4**。
 
 ## 安装 Skill
 
 把下面这句话发给你的 AI 工具：
 
-> 请安装 https://github.com/chasing1874/oaky-skills/tree/v0.2.3/skills/oaky 中的 Oaky Skill，只安装到当前宿主。保留已有同名 Skill 的本地修改。然后读取 references/setup.md，检查执行依赖，并指导我从橡果设置里的「橡果 Skill」获取授权。不要在安装期间创建内容、定时任务或运行付费生成。
+> 请安装 https://github.com/chasing1874/oaky-skills/tree/v0.2.4/skills/oaky 中的 Oaky Skill，只安装到当前宿主。保留已有同名 Skill 的本地修改。然后读取 references/setup.md，检查执行依赖，并指导我从橡果设置里的「橡果 Skill」获取授权。不要在安装期间创建内容、定时任务或运行付费生成。
 
 也可以使用社区 [skills 安装器](https://github.com/vercel-labs/skills)，选择当前宿主的一条命令：
 
@@ -21,7 +21,7 @@ npx skills add chasing1874/oaky-skills --skill oaky --global --agent claude-code
 
 `npx skills` 是可选的社区安装工具，不是标准要求。安装前检查已有同名 Skill，不直接覆盖本地修改。
 
-不用 Node.js 安装 Skill 也可以：下载 [Release ZIP](https://github.com/chasing1874/oaky-skills/releases/download/v0.2.3/oaky-skill-0.2.3.zip)，把完整的 `oaky/` 目录放到：
+不用 Node.js 安装 Skill 也可以：下载 [Release ZIP](https://github.com/chasing1874/oaky-skills/releases/download/v0.2.4/oaky-skill-0.2.4.zip)，把完整的 `oaky/` 目录放到：
 
 | 宿主 | 用户技能目录 |
 | --- | --- |
@@ -32,7 +32,7 @@ npx skills add chasing1874/oaky-skills --skill oaky --global --agent claude-code
 
 ## 连接橡果
 
-安装后让 AI 按 `references/setup.md` 检查执行依赖：Node.js 22+ 和 `@oaky-ai/cli@0.2.2`。这个 npm 包提供 `oaky` 命令，用于鉴权与访问服务。Skill 格式本身不依赖 npm，Oaky 的业务执行依赖这个工具。
+安装后让 AI 按 `references/setup.md` 检查执行依赖：Node.js 22+ 和 `@oaky-ai/cli@0.2.3`。这个 npm 包提供 `oaky` 命令，用于鉴权与访问服务。Skill 格式本身不依赖 npm，Oaky 的业务执行依赖这个工具。
 
 从橡果设置 → 橡果 Skill 复制安装与授权说明给你信任的 AI。令牌通过 stdin 配置，不要提交到 Skill、仓库、命令参数或日志。完成后用 `oaky auth status` 与 `oaky agent capabilities` 验证连接。
 
