@@ -1,10 +1,10 @@
 # 安装与授权
 
-Oaky Skill 是标准 Agent Skills 目录，通过公开仓库 `https://github.com/chasing1874/oaky-skills` 或该仓库 Release 的 ZIP 分发。Skill 本身不需要 npm；它使用的执行依赖是 `@oaky-ai/cli`（最低版本 0.2.3），命令为 `oaky`，需要 Node.js 22 或以上及网络访问。
+Oaky Skill 是标准 Agent Skills 目录，通过公开仓库 `https://github.com/chasing1874/oaky-skills` 或该仓库 Release 的 ZIP 分发。Skill 本身不需要 npm；它使用的执行依赖是 `@oaky-ai/cli`（最低版本 0.3.0），命令为 `oaky`，需要 Node.js 22 或以上及网络访问。
 
 ## 已安装 Skill 后的连接
 
-正在读取这份已安装的 Skill 时，不要再次运行 Skill 安装器。先运行 `oaky version`；缺少执行依赖时安装 `npm install -g @oaky-ai/cli@0.2.3`，版本低于 0.2.3 时更新依赖。npm 提示找不到这个版本时（新版尚未同步到 npm 或镜像），改用本 Skill 发布页附带的同版本安装包：`npm install -g https://github.com/chasing1874/oaky-skills/releases/download/v0.2.4/oaky-ai-cli-0.2.3.tgz`。不要把 npm 包安装成功当成宿主已经发现 Skill。
+正在读取这份已安装的 Skill 时，不要再次运行 Skill 安装器。先运行 `oaky version`；缺少执行依赖时安装 `npm install -g @oaky-ai/cli@0.3.0`，版本低于 0.3.0 时更新依赖。npm 提示找不到这个版本时（新版尚未同步到 npm 或镜像），改用本 Skill 发布页附带的同版本安装包：`npm install -g https://github.com/chasing1874/oaky-skills/releases/download/v0.2.5/oaky-ai-cli-0.3.0.tgz`。不要把 npm 包安装成功当成宿主已经发现 Skill。
 
 ## Skill 安装与维护
 

@@ -11,7 +11,7 @@ description: 把橡果 Oaky 当作个人知识库：收藏与记录、整理标�
 
 首次使用或认证失败时读取 [安装与授权](references/setup.md)。已连接时不要重复安装或重新登录。
 
-1. 使用 `oaky agent capabilities` 确定能力由 `oaky_cli` 还是 `host_native` 承担。返回里的 `client` 说明版本：`oaky version` 低于 `client.cli.latest`（或 `client.cli.updateAvailable` 为 true）时先升级执行依赖再继续，运行 `oaky update`，旧版本没有这个命令时运行 `client.cli.updateCommand`；`client.skill.latest` 高于本 Skill 版本 0.2.4 时，告诉用户有新版 Skill，经用户同意后按[安装与授权](references/setup.md)里的升级方式更新。命令返回 HTTP 426 / `cli_update_required` 时，运行 `oaky update` 后重试。
+1. 使用 `oaky agent capabilities` 确定能力由 `oaky_cli` 还是 `host_native` 承担。返回里的 `client` 说明版本：`oaky version` 低于 `client.cli.latest`（或 `client.cli.updateAvailable` 为 true）时先升级执行依赖再继续，运行 `oaky update`，旧版本没有这个命令时运行 `client.cli.updateCommand`；`client.skill.latest` 高于本 Skill 版本 0.2.5 时，告诉用户有新版 Skill，经用户同意后按[安装与授权](references/setup.md)里的升级方式更新。命令返回 HTTP 426 / `cli_update_required` 时，运行 `oaky update` 后重试。
 2. 运行一次 `oaky agent tools` 获取当前业务目录。工具列出 `actions` 签名（如 `get(clipId, sectionId?)`，必填在前、可选带 `?`）且所需参数从签名已经明确时，直接经 stdin 或请求文件调用 `oaky agent tool invoke --name <tool> --input -`。
 3. 拿不准某个 action 的字段时只读那一个：`oaky agent tool describe --name <tool> --action <action>`（多个用逗号分隔）。目录里没有 `actions` 的工具，或需要工具级概览时，用 `oaky agent tool describe --name <tool>`。复杂领域再按需发现单个 Format / operation，不一次加载全部合同。
 
